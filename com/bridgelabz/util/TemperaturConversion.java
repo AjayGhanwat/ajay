@@ -24,6 +24,11 @@ class TemperaturConversion {
       mF = (mC * 9/5) + 32;
       System.out.println("Temprature in Fahrenheit is "+mF);
       
-     
+      System.out.println("Enter The Temprature in Fahrenheit: ");
+      mF = sc.nextDouble();
+
+      mC = (mF - 32)*  5/9;
+      System.out.println("Temprature in Celsius is "+mC);
+
    }
 }

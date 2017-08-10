@@ -18,12 +18,12 @@ class WindChill {
       mTemp = Math.abs(mTemp);
 
       //CALCULATE WIND CHILL IF TEMP IS LESS AND SPEED IS GREATER THAN 120
-      if(mTemp <= 50 && (mSpeed > 120 || 3 > mSpeed)) {
+      if(mTemp <= 50 && (mSpeed < 120 || 3 < mSpeed)) {
          mSpeed = Math.pow(mSpeed,0.16);
          double mWind = 35.74 + 0.6215 * mTemp + (0.4275 * mTemp - 35.75) * mSpeed;
          System.out.println("Wind Chill is "+mWind);
       }
       else 
-         System.out.println("Tempreture(F) is larger that 50  otherwies Speed greater than 3 and smaller than 120 ..");
+         System.out.println("Tempreture(F) is larger that 50  otherwies Speed lower than 3 and greater than 120 ..");
    }
 }
