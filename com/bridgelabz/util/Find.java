@@ -17,7 +17,7 @@ class Find {
       
       int mMax1 = a[0], mMin1 = a[0];
 
-      int mMax2 = 0, mMin2 = mMin1;
+      int mMax2 = 0, mMin2 = 00;
 
       //Find the 2nd last greater number from unsorted array
       for(int i = 0; i < a.length; i++) {
@@ -36,7 +36,7 @@ class Find {
 
 	if(mMin1 > a[i]) {
             mMin2 = mMin1;
-	    mMin1 = a[i];
+            mMin1 = a[i];
         }
       }
 

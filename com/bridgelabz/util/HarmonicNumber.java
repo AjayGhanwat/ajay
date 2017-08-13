@@ -10,23 +10,29 @@ package com.bridgelabz.util;
 
 class HarmonicNumber {
 
-   public static void main(String args[]) {
+   void harmonic(int given){
 
       //i is used as Counter variable
       float i = 1;
 
       //Stored the harmonic number
-      double h = 0;
+      double mHarmonicNumber = 0;
 
-      int mNthNumber = Integer.parseInt(args[0]);
+      int mNthNumber = given;
 
       //Calculates the harmonic number 
       while(i <= mNthNumber) {
          System.out.print("+");
-         h = h + (1/i) ;
+         mHarmonicNumber = mHarmonicNumber + (1/i) ;
 	 System.out.print("1/"+i);
          i++;
       }
-      System.out.println(" = "+h);
+      System.out.println(" = "+mHarmonicNumber);
+   }
+   public static void main(String args[]) {
+   
+   HarmonicNumber h = new HarmonicNumber();
+   h.harmonic(Integer.parseInt(args[0]));
+   
    }
 }

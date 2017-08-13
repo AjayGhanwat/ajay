@@ -11,27 +11,31 @@ package com.bridgelabz.util;
 import java.util.Scanner;
 
 class IntOpt {
-	
-	public static void main(String args[]) { 
 
-		Scanner sc = new Scanner(System.in);
-		
-		//a,b,c is decleared To take input from user
-		int a, b, c;
-		
-		//Taking Input From User
-		System.out.print("Enter values A:");
-		a=sc.nextInt();
-		System.out.print("Enter values B:");
-		b=sc.nextInt();
-		System.out.print("Enter values C:");
-		c=sc.nextInt();
-		
+   static void cal() { 
+      Scanner sc = new Scanner(System.in);
+      
+      //a,b,c is decleared To take input from user
+      int a, b, c;
 
-		//Prints The output  
-		System.out.println("a + b * c = "+( a + b * c ));
-		System.out.println("a * b + c = "+( a * b + c ));
-		System.out.println("c + a / b = "+( c + a / b ));
-		System.out.println("a % b + c = "+( a % b + c ));
-	}
+      //Taking Input From User
+      System.out.print("Enter values A:");
+      a=sc.nextInt();
+      System.out.print("Enter values B:");
+      b=sc.nextInt();
+      System.out.print("Enter values C:");
+      c=sc.nextInt();
+
+      //Prints The output  
+      System.out.println("a + b * c = "+( a + b * c ));
+      System.out.println("a * b + c = "+( a * b + c ));
+      System.out.println("c + a / b = "+( c + a / b ));
+      System.out.println("a % b + c = "+( a % b + c ));
+
+   }
+   
+   public static void main(String args[]) { 
+   //call the function cal.
+   cal();		
+   }
 }
