@@ -8,7 +8,7 @@
 
 package com.bridgelabz.util;
 
-class Binary {
+public class Binary {
 
    public static void  main(String args[]) {
        
