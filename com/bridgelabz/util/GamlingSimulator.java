@@ -26,12 +26,12 @@ public class GamlingSimulator {
 
             
             int cash = mStake;
-            while (cash > 0 && cash < goal) {
+            while (cash > 0 && cash < mGoal) {
                 bets++;
                 if (Math.random() < 0.5) cash++;     
                 else                     cash--;     
             }
-            if (cash == goal) wins++;               
+            if (cash == mGoal) wins++;               
         }
 
         //prints the winn , percentage of win and avg bets

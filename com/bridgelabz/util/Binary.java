@@ -15,22 +15,13 @@ public class Binary {
       //takes the command line argument from user
       int nNumber = Integer.parseInt(args[0]);
 
-      int mDivision = 1;
+      int d;
 
-      //find the power of 2 from small to large
-      while(mDivision <= nNumber/2)
-         mDivision *=2;
+      while(nNumber > 0) {
+         d = nNumber % 2;
+         nNumber = nNumber / 2;
 
-      //prints the binary number from large to small
-      while(mDivision > 0) {
-
-         if(nNumber < mDivision)
-            System.out.print("0");
-         else {
-            System.out.print("1");
-            nNumber -= mDivision;
-         }	
-         mDivision /= 2;
+         System.out.print(d);
       }
       System.out.println();
    }
