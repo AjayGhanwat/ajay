@@ -15,13 +15,15 @@ public class Binary {
       //takes the command line argument from user
       int nNumber = Integer.parseInt(args[0]);
 
-      int d;
+      int mReminder,i = 0 ;
 
       while(nNumber > 0) {
-         d = nNumber % 2;
+         mReminder = nNumber % 2;
          nNumber = nNumber / 2;
-
-         System.out.print(d);
+         if(i==4) 
+           System.out.print(" ");
+         System.out.print(mReminder);
+         i++;
       }
       System.out.println();
    }
