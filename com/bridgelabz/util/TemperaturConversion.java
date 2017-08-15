@@ -12,23 +12,30 @@ import java.util.Scanner;
 
 class TemperaturConversion {
 
-   public static void main(String args[]) {
+   Scanner sc = new Scanner(System.in);
 
-      Scanner sc = new Scanner(System.in);
+   //Takes Temprature as input in runtime
+   double mC,mF;
 
-      //Takes Temprature as input in runtime
-      double mC,mF;
-      System.out.println("Enter The Temprature in Celsius : ");
+   void convertCtoF(){
+      System.out.print("Enter The Temprature in Celsius : ");
       mC = sc.nextDouble();
 
       mF = (mC * 9/5) + 32;
       System.out.println("Temprature in Fahrenheit is "+mF);
-      
-      System.out.println("Enter The Temprature in Fahrenheit: ");
+   }
+
+   void convertFtoC(){
+      System.out.print("Enter The Temprature in Fahrenheit: ");
       mF = sc.nextDouble();
 
       mC = (mF - 32)*  5/9;
       System.out.println("Temprature in Celsius is "+mC);
+   }
+   public static void main(String args[]) {
 
+      TemperaturConversion t = new TemperaturConversion();
+      t.convertCtoF();
+      t.convertFtoC();
    }
 }

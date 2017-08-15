@@ -1,9 +1,9 @@
 /********************************************
- *Perpose:To Find the Number is Prime or Not
+ *Purpose:To Find the Number is Prime or Not
  *
- *@author:Ajay Ghanwat
- *@version: 1.8
- *@since: 06-08-2017
+ *@author:AjayGhanwat
+ *@version:1.8
+ *@since:06-08-2017
  ********************************************/
 
 package com.bridgelabz.util;
@@ -31,11 +31,11 @@ class primeNumber {
       
       //O is Not a Prime Number
       if(mNumber == 0)
-	System.out.print("0 is not prime");
+	     System.out.print("0 is not prime");
 
       for(int i=1;i<=mNumber;i++) {
 	  if((mNumber%i)==0)
-             mFlag++;
+	     mFlag++;
       }
       
       //print out whether number is prime or Not

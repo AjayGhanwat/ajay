@@ -12,43 +12,48 @@ import java.util.Scanner;
 
 class Quadratic {
 
-	public static void main(String args[]) {
-		
-		//a,b,c used Input from user
-		int a,b,c;
-	
-		//Stored the root1 and root2 
-		double root1,root2,d;
+	//a,b,c used Input from user
+	int mA,mB,mC;
 
-		Scanner sc = new Scanner(System.in);
+	//Stored the root1 and root2
+	double root1,root2,mD;
+
+	Scanner sc = new Scanner(System.in);
+
+	void findRoot(){
 
 		//takes input from user
 		System.out.println("Giver Qudratic Equation Is : ax^2+bx+c");
 		System.out.print("Enter a:");
-		a = sc.nextInt();
+		mA = sc.nextInt();
 		System.out.print("Enter b:");
-		b = sc.nextInt();
+		mB = sc.nextInt();
 		System.out.print("Enter c:");
-		c = sc.nextInt();
-		System.out.println("Giver Qudratic Equation Is : "+ a +"x^2+"+ b +"x+"+ c);
+		mC = sc.nextInt();
+		System.out.println("Giver Qudratic Equation Is : "+ mA +"x^2+"+ mB +"x+"+ mC);
 
 		//find the values of d
-		d = b * b - 4 * a * c;
+		mD = mB * mB - 4 * mA * mC;
 
-		if ( d > 0 ) {
+		if ( mD > 0 ) {
 			System.out.print("roots are real and unequal");
-			root1 = ( - b + Math.sqrt(d) ) / (2*a);
-			root2 = ( - b - Math.sqrt(d) ) / (2*a);
+			root1 = ( - mB + Math.sqrt(mD) ) / (2*mA);
+			root2 = ( - mB - Math.sqrt(mD) ) / (2*mA);
 			System.out.println("Firts Root is : " + root1 );
 			System.out.println("Second Root is : " + root2 );
 		}
-		else if( d == 0 ) {
+		else if( mD == 0 ) {
 			System.out.println("Root are real and equl");
-			root1 = ( -b + Math.sqrt(d) ) / (2*a);
+			root1 = ( -mB + Math.sqrt(mD) ) / (2*mA);
 			System.out.println("Root : "+ root1);
 		}
-		else 
+		else
 			System.out.println("Root are Imaginary.");
+	}
 
+	public static void main(String args[]) {
+
+		Quadratic q = new Quadratic();
+		q.findRoot();
 	}
 }

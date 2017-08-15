@@ -12,40 +12,46 @@ import java.util.Random;
 
 class RollDie {
 
+    Random r = new Random();
+
+    //Counter for count the side comes n times
+    int Side1 = 0, Side2 = 0, Side3 = 0, Side4 = 0, Side5 = 0, Side6 = 0;
+
     public static void main(String args[]){
 
-        Random r = new Random();
+       RollDie rd = new RollDie();
+       rd.findSideRolled(Integer.parseInt(args[0]));
+    }
+
+    void findSideRolled(int number){
+
         //Takes command Line arguments
-        int n = Integer.parseInt(args[0]);
+        int mNumber = number;
 
         //Dices n times the side store in array
-        int mDice[] = new int[n];
-
-        //Counter for count the side comes n times
-        int Side1 = 0, Side2 = 0, Side3 = 0, Side4 = 0, Side5 = 0, Side6 = 0;
+        int mDice[] = new int[mNumber];
 
         //Loop fo increamts the side comes
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < mNumber; i++) {
             mDice[i] = r.nextInt(6) + 1;
             switch (mDice[i]) {
                 case 1: Side1++;
-                        break;
+                    break;
                 case 2: Side2++;
-                        break;
+                    break;
                 case 3: Side3++;
-                        break;
+                    break;
                 case 4: Side4++;
-                        break;
+                    break;
                 case 5: Side5++;
-                        break;
+                    break;
                 case 6: Side6++;
-                        break;
+                    break;
             }
         }
         //Call the methode that Check and prints the result
         CheckSide(Side1,Side2,Side3,Side4,Side5,Side6);
     }
-
     //Display the which Side Comes more times and prints output
     public static void CheckSide(int S1,int S2,int S3,int S4,int S5,int S6){
         if(S1 >= S2 && S1 >= S3 && S1 >= S4 && S1 >= S5 && S1 >= S6)

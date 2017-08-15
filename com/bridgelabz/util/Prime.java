@@ -11,16 +11,16 @@ package com.bridgelabz.util;
 import java.util.Scanner;
 
 class Prime {
-   public static void main(String args[]) {
 
-      Scanner sc = new Scanner(System.in);
+   Scanner sc = new Scanner(System.in);
 
-      //It will takes the inpute from user that Range the program performs
-      int mFrom, mTo;
-   
-      //mFlags is work as counter 
-      int mFlag = 0;
+   //It will takes the inpute from user that Range the program performs
+   int mFrom, mTo;
 
+   //mFlags is work as counter
+   int mFlag = 0;
+
+   void checkPrime() {
 
       //Takes Input from user
       System.out.print("Enter the range start from : ");
@@ -43,10 +43,15 @@ class Prime {
          }
 
          //Check that the counter is 2 on not if 2 it is prime number and prints
-         if(mFlag == 2) 
-           System.out.println(i);
+         if(mFlag == 2)
+            System.out.println(i);
 
          mFlag = 0;
       }
+   }
+   public static void main(String args[]) {
+
+      Prime p = new Prime();
+      p.checkPrime();
    }
 }

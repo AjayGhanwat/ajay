@@ -10,20 +10,25 @@ package com.bridgelabz.util;
 
 public class Sqrt {
 
-    public static void main(String args[]) {
-
-        double c = Double.parseDouble(args[0]);
+    void findSqrt(double number){
+        double mNumber = number;
 
         double epsilon = 1e-15;
 
-        double t = c;          
+        double t = mNumber;
 
-        while (Math.abs(t - c/t) > epsilon*t) {
-            t = (c/t + t) / 2.0;
+        while (Math.abs(t - mNumber/t) > epsilon*t) {
+            t = (mNumber/t + t) / 2.0;
         }
 
-        // prints square root of c
+        // prints square root of mNumber
         System.out.println(t);
+    }
+
+    public static void main(String args[]) {
+
+        Sqrt s = new Sqrt();
+        s.findSqrt(Double.parseDouble(args[0]));
     }
 
 }

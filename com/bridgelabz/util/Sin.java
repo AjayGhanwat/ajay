@@ -19,12 +19,12 @@ class Sin {
       }
       return mFactorial;
    }
-   
-   public static void main(String args[]) {
-      
-      double angle = Double.parseDouble(args[0]);
-       
-      double count = Double.parseDouble(args[1]);
+
+   void findSin(double nAngle, double nCount){
+
+      double angle = nAngle;
+
+      double count = nCount;
 
       angle = angle % (2 * Math.PI);
 
@@ -39,17 +39,23 @@ class Sin {
       while(count > 0) {
          if(flag == 1) {
             sinx += (Math.pow(angle, power)/factorial(power));
-            count--; 
+            count--;
             power+= 2;
             flag = 0;
          }
          else {
             sinx -= (Math.pow(angle, power)/factorial(power));
-            count--; 
+            count--;
             power+= 2;
             flag = 1;
          }
       }
       System.out.println(sinx);
+   }
+   
+   public static void main(String args[]) {
+      
+      Sin s = new Sin();
+      s.findSin(Double.parseDouble(args[0]),Double.parseDouble(args[1]));
    }
 }

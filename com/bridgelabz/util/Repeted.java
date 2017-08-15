@@ -10,7 +10,7 @@ package com.bridgelabz.util;
 
 public class Repeted {
 
-    public static void main(String args[]) {
+    void findRepeted() {
 
         //Array that Store the integer number
         int[] array = {1,25,64,23,84,15,32,51,45,35,25};
@@ -23,8 +23,14 @@ public class Repeted {
                 if(array[i] == array[j]) {
 
                     System.out.println("Repeted Number is " + array[i]);
-                } 
+                }
             }
         }
+    }
+
+    public static void main(String args[]) {
+
+       Repeted r = new Repeted();
+       r.findRepeted();
     }
 }
