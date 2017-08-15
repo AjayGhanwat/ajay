@@ -19,12 +19,11 @@ class Cos {
       }
       return mFactorial;
    }
-   
-   public static void main(String args[]) {
-      
-      double angle = Double.parseDouble(args[0]);
-       
-      double count = Double.parseDouble(args[1]);
+
+   void findCos(double nAngle,double nCount) {
+      double angle = nAngle;
+
+      double count = nCount;
 
       angle = angle % (2 * Math.PI);
 
@@ -39,17 +38,23 @@ class Cos {
       while(count > 0) {
          if(flag == 1) {
             cosx += (Math.pow(angle, power)/factorial(power));
-            count--; 
+            count--;
             power+= 2;
             flag = 0;
          }
          else {
             cosx -= (Math.pow(angle, power)/factorial(power));
-            count--; 
+            count--;
             power+= 2;
             flag = 1;
          }
       }
       System.out.println(cosx);
+   }
+   
+   public static void main(String args[]) {
+      
+      Cos c = new Cos();
+      c.findCos(Double.parseDouble(args[0]),Double.parseDouble(args[1]));
    }
 }
