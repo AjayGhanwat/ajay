@@ -10,10 +10,10 @@ package com.bridgelabz.util;
 
 public class Binary {
 
-   public static void  main(String args[]) {
-       
+   void binaryNumber(int number) {
+
       //takes the command line argument from user
-      int nNumber = Integer.parseInt(args[0]);
+      int nNumber = number;
 
       int mReminder,i = 0 ;
 
@@ -25,6 +25,13 @@ public class Binary {
          System.out.print(mReminder);
          i++;
       }
+
       System.out.println();
+
+   }
+   public static void  main(String args[]) {
+       
+      Binary b = new Binary();
+      b.binaryNumber(Integer.parseInt(args[0]));
    }
 }

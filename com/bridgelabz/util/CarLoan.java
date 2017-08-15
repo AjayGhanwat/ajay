@@ -10,12 +10,12 @@ package com.bridgelabz.util;
 
 class CarLoan {
 
-   public static void main(String args[]) {
+   void calculate(Double principle,int year,Double rate) {
 
       //Takes input from user at command Line arguments
-      double mPrinciple = Double.parseDouble(args[0]);
-      int mYear = Integer.parseInt(args[1]);
-      double mRate = Double.parseDouble(args[2]);
+      double mPrinciple = principle;
+      int mYear = year;
+      double mRate = rate;
 
       //Calculates Payment need to be completed per Month
       int n = 12 * mYear;
@@ -24,5 +24,12 @@ class CarLoan {
       double payment = (mPrinciple * r)/(1 - a);
 
       System.out.println("Payment Per Month is "+ payment);
+   }
+
+   public static void main(String args[]) {
+
+      CarLoan cl = new CarLoan();
+      cl.calculate(Double.parseDouble(args[0]),Integer.parseInt(args[1]),Double.parseDouble(args[2]));
+      
    }
 }
