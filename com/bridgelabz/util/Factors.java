@@ -10,23 +10,28 @@ package com.bridgelabz.util;
 
 public class Factors {
 
-    public static void main(String[] args) { 
-
+    void findPrimeFactor(long Number) {
         // takes input from command-line argument
-        long n = Long.parseLong(args[0]);
+        long mNumber = Number;
 
-        System.out.print("The prime factorization of " + n + " is: ");
+        System.out.print("The prime factorization of " + mNumber + " is: ");
 
         // for each potential factor
-        for (long factor = 2; factor*factor <= n; factor++) {
+        for (long factor = 2; factor*factor <= mNumber; factor++) {
 
-            while (n % factor == 0) {
-                System.out.print(factor + " "); 
-                n = n / factor;
+            while (mNumber % factor == 0) {
+                System.out.print(factor + " ");
+                mNumber = mNumber / factor;
             }
         }
 
-        if (n > 1) System.out.println(n);
+        if (mNumber > 1) System.out.println(mNumber);
         else       System.out.println();
+    }
+
+    public static void main(String[] args) { 
+
+        Factors f = new Factors();
+        f.findPrimeFactor(Long.parseLong(args[0]));
     }
 }

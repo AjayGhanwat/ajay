@@ -12,9 +12,8 @@ import java.util.Scanner;
 
 class FlipCoin {
 
-   public static void main(String args[]) {
-      
-      //mHead and mTails is used as Counter that counts The times the Coin tossed 
+   void coinTossed(){
+      //mHead and mTails is used as Counter that counts The times the Coin tossed
       double mHead = 0,mTails = 0;
       int mTimes,i = 0;
 
@@ -28,8 +27,8 @@ class FlipCoin {
       while(i < mTimes) {
          if(Math.random() < 0.5 ) {
             System.out.println("Head");
-	    mHead++;
-	 }
+            mHead++;
+         }
          else {
             System.out.println("Tails");
             mTails++;
@@ -40,5 +39,11 @@ class FlipCoin {
       //To display the percentage of the coin tossed as head and tail
       System.out.println("Percentage Head is tossed is "+(mHead/mTimes)*100);
       System.out.println("Percentage Tail is tossed is "+(mTails/mTimes)*100);
+   }
+
+   public static void main(String args[]) {
+      
+      FlipCoin fp = new FlipCoin();
+      fp.coinTossed();
    }
 }

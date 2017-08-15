@@ -9,17 +9,22 @@
 package com.bridgelabz.util;
 
 class Distance {
+
+	void findDistance(int xAxis,int yAxis) {
+		//Takes commandline arguments
+		int mXAxis=xAxis;
+		int mYAxis=yAxis;
+
+		double xPower = Math.pow(mXAxis,2);
+		double yPower = Math.pow(mYAxis,2);
+
+		double dist = Math.sqrt(xPower+yPower);
+
+		System.out.println("Distance from ("+ mXAxis +","+ mYAxis +") to(0,0) = "+ dist);
+	}
 	public static void main(String args[]) {
 
-		//Takes commandline arguments
-		int x=Integer.parseInt(args[0]);
-		int y=Integer.parseInt(args[1]);
-
-		double a = Math.pow(x,2);
-		double b = Math.pow(y,2);
-
-		double dist = Math.sqrt(a+b);
-
-		System.out.println("Distance from ("+ x +","+ y +") to(0,0) = "+ dist);
+		Distance d = new Distance();
+		d.findDistance(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
 	} 
 }

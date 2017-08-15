@@ -10,13 +10,19 @@ package com.bridgelabz.util;
 
 class PowerOf2 {
 
-   public static void main(String args[]) {
+   void findPower(int number) {
 
-      //Takes the inpute from Command line arguments 
-      int mNumber = Integer.parseInt(args[0]);
-      
+      //Takes the inpute from Command line arguments
+      int mNumber = number;
+
       //Calculates the Power of 2
       for(int i = 0; i <= mNumber; i++)
-         System.out.println(i +" "+Math.pow(2,i));
+         System.out.println(i +" "+(int)Math.pow(2,i));
+   }
+
+   public static void main(String args[]) {
+
+    PowerOf2 p = new PowerOf2();
+    p.findPower(Integer.parseInt(args[0]));
    }
 }
