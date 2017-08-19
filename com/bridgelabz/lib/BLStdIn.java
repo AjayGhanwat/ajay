@@ -22,9 +22,9 @@ class BLStdIn {
 	}
 	
 	public static int readInt(){
-		int number;
+		int token;
 		try{
-			number = scanner.nextInt();
+			token = scanner.nextInt();
 		}
 		catch(InputMismatchException e){
 			String error = scanner.next();
@@ -33,13 +33,13 @@ class BLStdIn {
 		catch (NoSuchElementException e) {
             throw new NoSuchElementException("No Elements Input given.");
         }
-		return number;
+		return token;
 	}
 	
 	public static double readDouble(){
-		double number;
+		double token;
 		try{
-			number = scanner.nextDouble();
+			token = scanner.nextDouble();
 		}
 		catch(InputMismatchException e){
 			String error = scanner.next();
@@ -48,20 +48,20 @@ class BLStdIn {
 		catch (NoSuchElementException e) {
             throw new NoSuchElementException("No Elements Input given.");
         }
-		return number;
+		return token;
 	}
 	
 	public static boolean readBoolean(){
-		String number;
+		String token;
 		try{
-			number = scanner.next();
-			if("true".equalsIgnoreCase(number)) 
+			token = scanner.next();
+			if("true".equalsIgnoreCase(token)) 
 				return true;
-			else if("false".equalsIgnoreCase(number)) 
+			else if("false".equalsIgnoreCase(token)) 
 				return false;
-			else if("0".equalsIgnoreCase(number)) 
+			else if("0".equalsIgnoreCase(token)) 
 				return false;
-			else if("1".equalsIgnoreCase(number)) 
+			else if("1".equalsIgnoreCase(token)) 
 				return true;
             else
 				BLStdOut.println("Enter only true or false.");
@@ -72,11 +72,20 @@ class BLStdIn {
         }
 	}
 	
+	public static String readString() {
+        try {
+            return scanner.next();
+        }
+        catch (NoSuchElementException e) {
+            throw new NoSuchElementException("attempts to read a 'String' value from standard input, but there are no more tokens available");
+        }
+    }
+	
 	public static void main(String args[]) {
 		
-        BLStdOut.print("Type a Boolean: ");
-        boolean c = BLStdIn.readBoolean();
-        BLStdOut.println("Your boolean was: " + c);
+        BLStdOut.print("Type a string: ");
+        String s = readString();
+        BLStdOut.println("Your string was: " + s);
         BLStdOut.println();
 	}
 }
