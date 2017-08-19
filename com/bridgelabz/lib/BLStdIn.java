@@ -68,7 +68,7 @@ class BLStdIn {
 		}
 		catch(InputMismatchException e){
 			String error = scanner.next();
-			throw new InputMismatchException("Attemp to read double value but " + error + " is get from user");
+			throw new InputMismatchException("Attemp to read boolean value but " + error + " is get from user");
 		}
 	}
 	
