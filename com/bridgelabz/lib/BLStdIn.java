@@ -83,9 +83,5 @@ class BLStdIn {
 	
 	public static void main(String args[]) {
 		
-        BLStdOut.print("Type a string: ");
-        String s = readString();
-        BLStdOut.println("Your string was: " + s);
-        BLStdOut.println();
 	}
 }
