@@ -1,5 +1,5 @@
 /*************************************************
- *Perpose:
+ *Perpose: Print given data.
  *
  *@author:Ajay Ghanwat
  *@version: 1.8
