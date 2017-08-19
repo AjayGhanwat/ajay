@@ -67,7 +67,5 @@ class BLStdIn {
 	
 	public static void main(String args[]) {
 		
-		boolean c = readBoolean();
-		BLStdOut.println(c);
 	}
 }
