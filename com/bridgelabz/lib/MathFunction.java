@@ -6,7 +6,7 @@
  *@since: 17-08-2017
  **************************************************/
 
-package com.bridgelabz.util;
+package com.bridgelabz.lib;
 
 class MathFunctions{
 
