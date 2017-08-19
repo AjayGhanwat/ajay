@@ -55,21 +55,21 @@ class BLStdIn {
 		String number;
 		try{
 			number = scanner.next();
-			if(number == "true") 
+			if("true".equalsIgnoreCase(number)) 
 				return true;
-			else if(number == "false") 
+			else if("false".equalsIgnoreCase(number)) 
 				return false;
-			else if(number == "0") 
+			else if("0".equalsIgnoreCase(number)) 
 				return false;
-			else if(number == "1") 
+			else if("1".equalsIgnoreCase(number)) 
 				return true;
             else
-				BLStdOut.println("Enter only true(1) or false(0).");
+				BLStdOut.println("Enter only true or false.");
+			throw new InputMismatchException("Attemp to read boolean value");
 		}
-		catch(InputMismatchException e){
-			String error = scanner.next();
-			throw new InputMismatchException("Attemp to read boolean value but " + error + " is get from user");
-		}
+		catch (NoSuchElementException e) {
+            throw new NoSuchElementException("Attemp to read boolean value.");
+        }
 	}
 	
 	public static void main(String args[]) {
